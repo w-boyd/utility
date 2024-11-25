@@ -79,7 +79,7 @@ function Get-Diff {
             $removeLines = $output.Split($n)[0..3] -join $n
             $output = $output -replace [regex]::Escape($removeLines)
             if (-not $output) {
-                return Write-Verbose "No differences found" -Verbose
+                return Write-Verbose "No differences found"
             }
             $output
         }
